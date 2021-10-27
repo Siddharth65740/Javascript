@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Budget Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script>
+    if(!localStorage.getItem("add_rec")){
+      let li=[];
+      localStorage.setItem("add_rec",JSON.stringify(li));
+    }
+      function table(){
+          let var1=document.getElementById("name").value;
+          let var2=document.getElementById("name1").value;
+          let var3=document.getElementById("budget").value;
+          document.getElementById("body").innerHTML += `<tr>
+                                               <td>${var1}</td>
+                                               <td>${var2}</td>
+                                               <td>${var3}</td>
+                                               </tr>
+                                                    `;
+
+      }
+  </script>
+  <style>
+          h1{
+            text-align: center;
+          }
+
+                form.form-example {
+                display: inline-block;
+            }
+
+          h2{
+                text-align: center;
+            }
+          table{
+              text-align: center;
+          }
+
+            div.form-example {
+                display: block;
+                text-align: center;
+            }
+
+            label, input {
+                display: inline-block;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            label {
+                padding-right: 10px;
+            }
+
+  </style>
+</head>
+<body>
+<h1>Add New Budget</h1>
+
+
+<h2>Annual Budget</h2>
+  <table class="table table-striped" id="table_id">
+  <thead>
+    <tr>
+      <th scope="col">Client Name</th>
+      <th scope="col">Project Name</th>
+      <th scope="col">Budget</th>
+    </tr>
+  </thead>
+  <tbody id="body">
+
+  </tbody>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<a href="home_page_html.html">BACK</a>
+</body>
+</html>
